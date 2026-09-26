@@ -922,14 +922,14 @@
 <th style="width: 29%">Key Results</th>
 </tr>
 <tr>
-<td class="proj-name"><a href="#s3">Public Procurement Bid Requirement Analysis &amp; Response Automation</a></td>
+<td class="proj-name"><a href="#s3">AI-Powered Bid Analysis &amp; Response Automation</a></td>
 <td>Data &amp; LLM Engineer</td>
 <td>6</td>
 <td>2026.05.14–05.29</td>
 <td>Azure OpenAI, AI Search, Azure Functions</td>
 <td> Downstream processing volume <span class="kpi">reduced by 95.1%</span>(15,894 → 779); <span class="kpi">8 Azure resources</span> deployment automated </td>
 </tr><tr>
-<td class="proj-name"><a href="#s6">Post-Offboarding Residual Access Detection &amp; Remediation Support</a></td>
+<td class="proj-name"><a href="#s6">Post-Offboarding Access Detection &amp; Remediation</a></td>
 <td>Data Engineer</td>
 <td>5</td>
 <td>2026.06.22–07.09</td>
@@ -937,7 +937,7 @@
 <td> Integrated 16 objects from 7 systems into <span class="kpi">4 common entities</span>; detected all <span class="kpi">37 injected errors</span>
 </td>
 </tr><tr>
-<td class="proj-name"><a href="#s8">Vulnerability Reassessment &amp; Remediation Automation</a></td>
+<td class="proj-name"><a href="#s8">Vulnerability Reassessment &amp; Remediation</a></td>
 <td>Data &amp; Full-Stack Engineer</td>
 <td>6</td>
 <td>2026.08.03–09.04</td>
@@ -972,7 +972,7 @@
 <div class="project-title">
 <div>
 <div class="kicker">Project 1</div>
-<h2>Public Procurement Bid Requirement Analysis &amp; Response Automation</h2>
+<h2>AI-Powered Bid Analysis &amp; Response Automation</h2>
 </div>
 </div>
 <div class="meta-row">
@@ -989,24 +989,24 @@
 <section class="summary-card">
 <h3>Context</h3>
 <ul>
-<li> Critical eligibility requirements are often buried in attachments, making notices difficult to assess quickly. </li>
-<li> Follow-up work is distributed across teams even after requirements are extracted. </li>
+<li> Critical eligibility requirements are buried in attachments. </li>
+<li> Review and follow-up work is distributed across teams. </li>
 </ul>
 </section>
 <section class="summary-card">
 <h3>Role</h3>
 <ul>
-<li> Built the pipeline from notice and attachment ingestion through requirement structuring, matching, and action generation. </li>
-<li>Implemented LLM-based requirement extraction and evidence-grounded RAG Q&amp;A.</li>
+<li> Built the pipeline from notice ingestion to matching and action generation. </li>
+<li>Implemented LLM extraction and evidence-grounded RAG.</li>
 <li>Automated infrastructure deployment with Bicep and GitHub Actions.</li>
 </ul>
 </section>
 <section class="summary-card">
 <h3>Key Results</h3>
 <ul>
-<li>Downstream processing volume <strong>reduced by 95.1%</strong>(15,894 → 779)</li>
-<li>Reduced bid-condition misclassification through LLM and rule-based validation.</li>
-<li><strong>8 Azure resources</strong> standardized for configuration and deployment.</li>
+<li>Reduced downstream records by <strong>95.1%: 15,894 → 779</strong></li>
+<li>Reduced misclassification through rule-based validation.</li>
+<li>Automated deployment of <strong>8 Azure resources</strong>.</li>
 </ul>
 </section>
 </aside>
@@ -1017,7 +1017,7 @@
 <header class="challenge-head">
 <div>
 <div class="kicker">Project 1 · Core Challenge</div>
-<h2>Evaluating Models on Real Notices and Improving Extraction Quality</h2>
+<h2>Evaluating Models on Real Notices</h2>
 </div>
 </header>
 <main class="challenge-grid">
@@ -1035,27 +1035,27 @@
 <div class="challenge-right">
 <section class="challenge-section problem-box">
 <h3>Problem</h3>
-<p>The initial low-cost model returned no requirements from two notices containing explicit eligibility conditions, requiring a model decision based on both extraction quality and cost.</p>
+<p>The low-cost model missed explicit eligibility conditions in two real notices, requiring a quality-versus-cost decision.</p>
 </section>
 <section class="challenge-section solution-section">
 <h3>Solution</h3>
-<div class="decision-line"><p>Compared candidate models on identical documents and prioritized the impact of missed mandatory requirements over the incremental cost.</p></div>
+<div class="decision-line"><p>Compared models on identical documents and prioritized mandatory-condition coverage over incremental cost.</p></div>
 <div class="solution-list">
 <div class="solution-row">
 <h4><span>01</span>Extraction Quality vs. Cost</h4>
-<p>Compared nano and mini across six real attachments. Although mini cost 4× more per input token, projected usage was only about $1–2 per month, so requirement coverage took priority.</p>
+<p>Compared nano and mini on six attachments. Mini cost 4× more per input token, but projected usage was only $1–2 per month.</p>
 </div>
 <div class="solution-row">
 <h4><span>02</span>Decision Criteria and Positive/Negative Examples</h4>
-<p>Defined whether a notice actually restricted bidder location, added positive and negative examples, and revalidated outputs with regex and keyword rules.</p>
+<p>Defined location-restriction criteria, added positive and negative examples, and revalidated outputs with rules.</p>
 </div>
 </div>
 </section>
 <section class="challenge-section">
 <h3>Results</h3>
 <ul class="validation-list">
-<li>Condition items extracted from the same two notices: <strong>0 → 7 and 0 → 19</strong></li>
-<li>Kept empty forms at zero extractions and corrected <strong>3 of 8 location-condition errors</strong></li>
+<li>Extracted conditions from the same notices: <strong>0 → 7 and 0 → 19</strong></li>
+<li>Kept empty forms at zero and corrected <strong>3 of 8 location errors</strong></li>
 </ul>
 </section>
 </div>
@@ -1066,7 +1066,7 @@
 <header class="challenge-head">
 <div>
 <div class="kicker">Project 1 · Core Challenge</div>
-<h2>Automating AI Service Deployment and Observability</h2>
+<h2>Automating AI Deployment &amp; Observability</h2>
 </div>
 </header>
 <main class="challenge-grid">
@@ -1084,28 +1084,28 @@
 <div class="challenge-right">
 <section class="challenge-section problem-box">
 <h3>Problem</h3>
-<p>The LLM, retrieval, and API stack spanned eight Azure resources. Manual setup risked inconsistent deployment names and endpoints, making the environment hard to reproduce.</p>
+<p>The AI stack spanned eight Azure resources, and manual setup made environments inconsistent and hard to reproduce.</p>
 </section>
 <section class="challenge-section solution-section">
 <h3>Solution</h3>
-<div class="decision-line"><p>Defined resources and connection settings as code and managed them through the same CI/CD flow as the application.</p></div>
+<div class="decision-line"><p>Managed resources and connections as code through the application CI/CD flow.</p></div>
 <div class="solution-list">
 <div class="solution-row">
 <h4><span>01</span>AI Runtime Environment as Code</h4>
-<p>Defined eight Azure resources and their connections in Bicep, then validated and deployed them through GitHub Actions.</p>
+<p>Defined eight connected resources in Bicep and deployed them through GitHub Actions.</p>
 </div>
 <div class="solution-row">
 <h4><span>02</span>Connected Logs, Failures, and Alerts</h4>
-<p>Used Application Insights for API and workflow logs and Microsoft Teams alerts to identify failure points after deployment.</p>
+<p>Connected Application Insights logs and Teams alerts to trace deployment failures.</p>
 </div>
 </div>
 </section>
 <section class="challenge-section">
 <h3>Results</h3>
 <ul class="validation-list">
-<li><strong>8 Azure resources</strong>and their connections standardized as code</li>
-<li>Repeatable deployment and environment reconstruction from one IaC definition</li>
-<li>Post-deployment failures traceable through logs and alerts</li>
+<li><strong>8 Azure resources</strong> standardized as code</li>
+<li>Repeatable environment reconstruction from one IaC definition</li>
+<li>Deployment failures traceable through logs and alerts</li>
 </ul>
 </section>
 </div>
@@ -1117,7 +1117,7 @@
 <div class="project-title">
 <div>
 <div class="kicker">Project 2</div>
-<h2>Post-Offboarding Residual Access Detection &amp; Remediation Support</h2>
+<h2>Post-Offboarding Access Detection &amp; Remediation</h2>
 </div>
 </div>
 <div class="meta-row">
@@ -1134,25 +1134,25 @@
 <section class="summary-card">
 <h3>Context</h3>
 <ul>
-<li> Disabling a departed employee’s account may still leave indirect access through service accounts and credentials with separate lifecycles. </li>
-<li> Different identity and permission models make these access paths difficult to assess together. </li>
+<li> Offboarding can leave indirect access through service accounts and credentials. </li>
+<li> Different identity models make access paths difficult to assess together. </li>
 </ul>
 </section>
 <section class="summary-card">
 <h3>Role</h3>
 <ul>
 <li>Designed a unified access graph and ELT pipeline across multiple systems.</li>
-<li>Implemented the data contract and ingestion pipeline for RAG evidence documents.</li>
-<li>Contributed to retrieval interfaces and principles for grounded answers, citations, and human approval.</li>
+<li>Built the data contract and ingestion pipeline for RAG evidence.</li>
+<li>Defined retrieval interfaces for grounded, cited answers and human approval.</li>
 </ul>
 </section>
 <section class="summary-card">
 <h3>Key Results</h3>
 <ul>
 <li>
-<strong>16 data objects across 7 systems</strong>normalized into 4 common entities </li>
-<li>Detected all <strong>37 injected errors</strong> and blocked downstream propagation</li>
-<li>Initial RAG evidence corpus with provenance and change history: <strong>9 chunks</strong> </li>
+<strong>16 objects across 7 systems</strong> normalized into 4 entities </li>
+<li>Detected all <strong>37 injected errors</strong> before downstream propagation</li>
+<li>Built a provenance-tracked RAG corpus: <strong>9 chunks</strong> </li>
 </ul>
 </section>
 </aside>
@@ -1181,29 +1181,29 @@
 <div class="challenge-right">
 <section class="challenge-section problem-box">
 <h3>Problem</h3>
-<p><strong>Evidence Selection</strong>: The system needed to retrieve risk- and system-specific policy, procedure, and API evidence while preserving links to the original source.</p>
-<p style="margin-top: 6px;"><strong>Data Boundary</strong>: Raw credential values could enter the corpus and LLM context.</p>
+<p><strong>Evidence Selection</strong>: The system needed risk-specific evidence with links to original sources.</p>
+<p style="margin-top: 6px;"><strong>Data Boundary</strong>: Raw credentials could enter the corpus and LLM context.</p>
 </section>
 <section class="challenge-section solution-section">
 <h3>Approach</h3>
-<div class="decision-line"><p>Encoded evidence scope and provenance as metadata rather than relying only on semantic similarity.</p></div>
+<div class="decision-line"><p>Encoded evidence scope and provenance as metadata beyond semantic similarity.</p></div>
 <div class="solution-list">
 <div class="solution-row">
 <h4><span>01</span>Curate and Normalize Evidence</h4>
-<p>Curated evidence units and tagged their applicable risk, system, and action type before converting them to a shared schema.</p>
+<p>Tagged evidence by risk, system, and action before normalizing it to a shared schema.</p>
 </div>
 <div class="solution-row">
 <h4><span>02</span>Validate Provenance and Sensitive Data</h4>
-<p>Stored evidence identifiers, provenance, and change history; blocked raw credentials and duplicates before ingestion.</p>
+<p>Tracked provenance and changes while blocking credentials and duplicates before ingestion.</p>
 </div>
 </div>
 </section>
 <section class="challenge-section">
 <h3>Results</h3>
 <ul class="validation-list">
-<li>Implemented a data contract, DDL, ingestion pipeline, and <strong>9 initial evidence chunks</strong></li>
-<li>Enabled metadata-filtered Vector Search and answer provenance tracking</li>
-<li>Designed <strong>7 security remediation evaluation scenarios</strong>with expected supporting evidence</li>
+<li>Built the data contract, DDL, pipeline, and <strong>9 evidence chunks</strong></li>
+<li>Enabled metadata-filtered retrieval and answer provenance</li>
+<li>Designed <strong>7 remediation evaluation scenarios</strong> with expected evidence</li>
 </ul>
 </section>
 </div>
@@ -1215,7 +1215,7 @@
 <div class="project-title">
 <div>
 <div class="kicker">Project 3</div>
-<h2>Vulnerability Reassessment &amp; Remediation Automation</h2>
+<h2>Vulnerability Reassessment &amp; Remediation</h2>
 </div>
 </div>
 <div class="meta-row">
@@ -1233,22 +1233,22 @@
 <h3>Context</h3>
 <ul>
 <li>Exploit likelihood can change long after a vulnerability is disclosed.</li>
-<li> Dependabot alerts were fragmented by repository and manifest, making it difficult to connect risk signals to remediation work. </li>
+<li> Repository-level alerts made risk signals hard to connect to remediation. </li>
 </ul>
 </section>
 <section class="summary-card">
 <h3>Role</h3>
 <ul>
-<li>Designed source-specific full and incremental ingestion strategies.</li>
-<li> Designed synchronization between Fabric risk analysis and PostgreSQL alert data. </li>
-<li> Built the reassessment and remediation service with PostgreSQL, FastAPI, and Next.js. </li>
+<li>Designed source-specific full and incremental ingestion.</li>
+<li> Synchronized Fabric risk analysis with PostgreSQL alert data. </li>
+<li> Built the remediation service with PostgreSQL, FastAPI, and Next.js. </li>
 </ul>
 </section>
 <section class="summary-card">
 <h3>Key Results</h3>
 <ul>
-<li> Collected and retained <strong>160M+</strong> daily risk-history records </li>
-<li> Compressed <strong>406 alerts → 66 risk-change matches → 10 review/remediation targets</strong> </li>
+<li> Retained <strong>160M+</strong> daily risk-history records </li>
+<li> Reduced <strong>406 alerts → 66 matches → 10 review targets</strong> </li>
 </ul>
 </section>
 </aside>
@@ -1259,7 +1259,7 @@
 <header class="challenge-head">
 <div>
 <div class="kicker">Project 3 · Core Challenge</div>
-<h2>Building LLM Context from Query- and Organization-Scoped Evidence</h2>
+<h2>Scoping LLM Context by Query and Organization</h2>
 </div>
 </header>
 <main class="challenge-grid">
@@ -1277,28 +1277,28 @@
 <div class="challenge-right">
 <section class="challenge-section problem-box">
 <h3>Problem</h3>
-<p>Operational data and analysis documents were distributed across multiple tables, requiring context to be assembled for the current query and organization only.</p>
+<p>Operational evidence spanned multiple tables and required query- and organization-specific context.</p>
 </section>
 <section class="challenge-section solution-section">
 <h3>Approach</h3>
-<div class="decision-line"><p>Used PostgreSQL as the source of truth for structured state and left semantic retrieval as an extension point for unstructured documents.</p></div>
+<div class="decision-line"><p>Used PostgreSQL for structured state and reserved semantic retrieval for unstructured documents.</p></div>
 <div class="solution-list">
 <div class="solution-row">
 <h4><span>01</span>Context-Scoped SQL and Organization Validation</h4>
-<p>Restricted SQL queries to the organization and review target implied by the user’s context, then revalidated organization scope before every LLM call.</p>
+<p>Scoped SQL by organization and review target, then revalidated scope before each LLM call.</p>
 </div>
 <div class="solution-row">
 <h4><span>02</span>Normalize Distributed Evidence</h4>
-<p>Converted operational records and analysis documents into a shared grounding format and returned only evidence cited in the answer.</p>
+<p>Normalized records and analysis documents, returning only cited evidence.</p>
 </div>
 </div>
 </section>
 <section class="challenge-section">
 <h3>Results</h3>
 <ul class="validation-list">
-<li>Built <strong>3 context levels</strong> for dashboard, review case, and package views</li>
-<li>Blocked generation before the LLM call when evidence from another organization was detected</li>
-<li>Returned only evidence actually cited in the answer, with identifiers and source links</li>
+<li>Built <strong>3 context scopes</strong> for dashboard, case, and package views</li>
+<li>Blocked LLM calls containing cross-organization evidence</li>
+<li>Returned cited evidence with identifiers and source links</li>
 </ul>
 </section>
 </div>
@@ -1310,7 +1310,7 @@
 <div class="project-title">
 <div>
 <div class="kicker">Career</div>
-<h2>Improving Production Data Flows and Operational Reliability</h2>
+<h2>Production Data Flows &amp; Reliability</h2>
 </div>
 </div>
 <div class="meta-row">
@@ -1324,25 +1324,25 @@
 <section class="career-card">
 <h3>Data Serving Architecture</h3>
 <ul>
-<li> Separated ledger replicas from consensus nodes and built a CQRS-based relational serving layer. </li>
-<li> Streamed ledger data in real time and improved query paths with sequential integer indexes. </li>
-<li>Implemented gzip-compressed backfill and event-replay state reconstruction.</li>
+<li> Separated ledger replicas from consensus nodes and built a CQRS serving layer. </li>
+<li> Streamed ledger data and optimized queries with sequential integer indexes. </li>
+<li>Implemented compressed backfill and event-replay state reconstruction.</li>
 </ul>
 </section>
 <section class="career-card">
 <h3>Core Migration and Data Compatibility</h3>
 <ul>
-<li> Migrated a legacy PHP system to a proven Go-based open-source client. </li>
-<li> Built a compatibility layer for processing legacy data in the new client. </li>
-<li> Extended consensus data and messaging interfaces for the company network. </li>
+<li> Migrated a legacy PHP system to a Go-based open-source client. </li>
+<li> Built a compatibility layer for legacy data. </li>
+<li> Extended consensus data and messaging interfaces. </li>
 </ul>
 </section>
 <section class="career-card">
 <h3>Development and Operations Automation</h3>
 <ul>
-<li>Automated multi-node P2P builds, configuration, and peering with Docker Compose.</li>
-<li>Built a visualization tool for node connectivity and consensus state.</li>
-<li>Built Grafana monitoring for network latency and database usage.</li>
+<li>Automated multi-node P2P setup and peering with Docker Compose.</li>
+<li>Visualized node connectivity and consensus state.</li>
+<li>Monitored network latency and database usage in Grafana.</li>
 </ul>
 </section>
 </div>

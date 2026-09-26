@@ -872,19 +872,23 @@
       html { scroll-behavior: smooth; }
       body { font-family: Inter, Arial, Helvetica, sans-serif; }
       .cta-row { display:flex; gap:10px; justify-content:center; margin-top:28px; flex-wrap:wrap; }
+      .portfolio-label { margin-bottom:18px; color:var(--navy); font-size:13px; font-weight:800; letter-spacing:2px; text-transform:uppercase; }
       .cta { padding:10px 16px; border:1px solid var(--navy); border-radius:6px; color:var(--navy); text-decoration:none; font-size:13px; font-weight:700; background:#fff; }
       .cta.primary { background:var(--navy); color:#fff; }
       .site-nav { position:fixed; z-index:1000; right:18px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:7px; padding:10px; border-radius:18px; background:rgba(255,255,255,.92); box-shadow:0 4px 18px rgba(0,0,0,.14); }
       .site-nav a { width:9px; height:9px; border-radius:50%; background:#b6bec7; display:block; }
       .site-nav a:hover, .site-nav a:focus { background:var(--navy); transform:scale(1.25); }
+      #s2 .proj-name a { color:inherit; text-decoration:none; border-bottom:1px solid transparent; }
+      #s2 .proj-name a:hover, #s2 .proj-name a:focus { color:var(--blue); border-bottom-color:var(--blue); }
       .slide-frame { width:1280px; height:720px; position:relative; flex-shrink:0; }
       .slide-frame > .slide { position:absolute; inset:0; transform-origin:top left; }
       .slide-label { color:#45515e; }
       @media (max-width:700px) { .site-nav { display:none; } body { padding-top:20px; } .deck { gap:22px; } }
 </style>
 <meta content="AI engineer portfolio featuring LLM evaluation, evidence-grounded RAG, backend integration, CI/CD, and observability." name="description"/><meta content="Jaeryun Joo | AI Engineer Portfolio" property="og:title"/><meta content="LLM evaluation, RAG grounding, backend integration, and reliable AI service delivery." property="og:description"/><meta content="website" property="og:type"/><meta content="width=device-width, initial-scale=1" name="viewport"/></head>
-<body><nav aria-label="Portfolio slides" class="site-nav"><a aria-label="Go to slide 1" href="#s1" title="Slide 1"></a><a aria-label="Go to slide 2" href="#s2" title="Slide 2"></a><a aria-label="Go to slide 3" href="#s3" title="Slide 3"></a><a aria-label="Go to slide 4" href="#s4" title="Slide 4"></a><a aria-label="Go to slide 5" href="#s5" title="Slide 5"></a><a aria-label="Go to slide 6" href="#s6" title="Slide 6"></a><a aria-label="Go to slide 7" href="#s7" title="Slide 7"></a><a aria-label="Go to slide 8" href="#s8" title="Slide 8"></a><a aria-label="Go to slide 9" href="#s9" title="Slide 9"></a><a aria-label="Go to slide 10" href="#s10" title="Slide 10"></a></nav>
+<body><nav aria-label="Portfolio slides" class="site-nav"><a aria-label="Go to cover" href="#s1" title="Cover"></a><a aria-label="Go to contents" href="#s2" title="Contents"></a><a aria-label="Go to Procurement AI overview" href="#s3" title="Procurement AI overview"></a><a aria-label="Go to LLM evaluation" href="#s4" title="LLM evaluation"></a><a aria-label="Go to deployment and observability" href="#s5" title="Deployment and observability"></a><a aria-label="Go to Access Remediation RAG overview" href="#s6" title="Access Remediation RAG overview"></a><a aria-label="Go to grounding corpus design" href="#s7" title="Grounding corpus design"></a><a aria-label="Go to Vulnerability Remediation AI overview" href="#s8" title="Vulnerability Remediation AI overview"></a><a aria-label="Go to context scoping and tenant isolation" href="#s9" title="Context scoping and tenant isolation"></a><a aria-label="Go to career" href="#s10" title="Career"></a></nav>
 <div class="deck"><div class="slide-label">1. Cover</div><div class="slide" id="s1">
+<div class="portfolio-label">AI Engineer Portfolio</div>
 <div class="headline">AI Engineer Connecting Data and LLMs to Real Services</div>
 <div class="subline">Design and implementation across RAG, backend services, and data pipelines</div><div class="cta-row"><a class="cta primary" href="assets/Jaeryun_Joo_AI_Engineer_Resume.pdf" rel="noopener" target="_blank">Resume</a><a class="cta" href="https://github.com/pexy99" rel="noopener" target="_blank">GitHub</a><a class="cta" href="https://www.linkedin.com/in/jaeryun-joo" rel="noopener" target="_blank">LinkedIn</a><a class="cta" href="mailto:urbanart2251@gmail.com">Email</a></div>
 <div class="skill-block">
@@ -918,14 +922,14 @@
 <th style="width: 29%">Key Results</th>
 </tr>
 <tr>
-<td class="proj-name"> Public Procurement Bid Requirement Analysis &amp; Response Automation </td>
+<td class="proj-name"><a href="#s3">Public Procurement Bid Requirement Analysis &amp; Response Automation</a></td>
 <td>Data &amp; LLM Engineer</td>
 <td>6</td>
 <td>2026.05.14–05.29</td>
 <td>Azure OpenAI, AI Search, Azure Functions</td>
 <td> Downstream processing volume <span class="kpi">reduced by 95.1%</span>(15,894 → 779); <span class="kpi">8 Azure resources</span> deployment automated </td>
 </tr><tr>
-<td class="proj-name"> Post-Offboarding Residual Access Detection &amp; Remediation Support </td>
+<td class="proj-name"><a href="#s6">Post-Offboarding Residual Access Detection &amp; Remediation Support</a></td>
 <td>Data Engineer</td>
 <td>5</td>
 <td>2026.06.22–07.09</td>
@@ -933,7 +937,7 @@
 <td> Integrated 16 objects from 7 systems into <span class="kpi">4 common entities</span>; detected all <span class="kpi">37 injected errors</span>
 </td>
 </tr><tr>
-<td class="proj-name">Vulnerability Reassessment &amp; Remediation Automation</td>
+<td class="proj-name"><a href="#s8">Vulnerability Reassessment &amp; Remediation Automation</a></td>
 <td>Data &amp; Full-Stack Engineer</td>
 <td>6</td>
 <td>2026.08.03–09.04</td>
@@ -951,7 +955,7 @@
 <th style="width: 29%">Key Results</th>
 </tr>
 <tr>
-<td class="proj-name">EQBR Holdings</td>
+<td class="proj-name"><a href="#s10">EQBR Holdings</a></td>
 <td>Blockchain Research Engineer</td>
 <td>4</td>
 <td>2021.01–2022.12</td>
@@ -1380,6 +1384,16 @@
   }
   window.addEventListener('resize', fitSlides);
   fitSlides();
+  document.querySelectorAll('a[href^="#s"]').forEach(link => {
+    link.addEventListener('click', event => {
+      const target = document.querySelector(link.getAttribute('href'));
+      const frame = target?.closest('.slide-frame');
+      if (!frame) return;
+      event.preventDefault();
+      frame.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', link.getAttribute('href'));
+    });
+  });
 })();
 </script></body>
 </html>

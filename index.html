@@ -870,20 +870,23 @@
       }
     
       html { scroll-behavior: smooth; }
-      body { font-family: Inter, Arial, Helvetica, sans-serif; }
+      body { font-family: Inter, Arial, Helvetica, sans-serif; background:#f3f5f7; padding:24px 0 40px; }
+      .deck { gap:24px; }
       .cta-row { display:flex; gap:10px; justify-content:center; margin-top:28px; flex-wrap:wrap; }
       .portfolio-label { margin-bottom:18px; color:var(--navy); font-size:13px; font-weight:800; letter-spacing:2px; text-transform:uppercase; }
       .cta { padding:10px 16px; border:1px solid var(--navy); border-radius:6px; color:var(--navy); text-decoration:none; font-size:13px; font-weight:700; background:#fff; }
       .cta.primary { background:var(--navy); color:#fff; }
       .site-nav { position:fixed; z-index:1000; right:18px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:7px; padding:10px; border-radius:18px; background:rgba(255,255,255,.92); box-shadow:0 4px 18px rgba(0,0,0,.14); }
-      .site-nav a { width:9px; height:9px; border-radius:50%; background:#b6bec7; display:block; }
+      .site-nav a { width:9px; height:9px; border-radius:50%; background:#b6bec7; display:block; position:relative; }
       .site-nav a:hover, .site-nav a:focus { background:var(--navy); transform:scale(1.25); }
+      .site-nav a::after { content:attr(title); position:absolute; right:20px; top:50%; transform:translateY(-50%); width:max-content; max-width:240px; padding:6px 9px; border-radius:5px; background:var(--navy); color:#fff; font-size:11px; font-weight:700; line-height:1.2; opacity:0; pointer-events:none; transition:opacity .15s ease; }
+      .site-nav a:hover::after, .site-nav a:focus::after { opacity:1; }
       #s2 .proj-name a { color:inherit; text-decoration:none; border-bottom:1px solid transparent; }
       #s2 .proj-name a:hover, #s2 .proj-name a:focus { color:var(--blue); border-bottom-color:var(--blue); }
-      .slide-frame { width:1280px; height:720px; position:relative; flex-shrink:0; }
-      .slide-frame > .slide { position:absolute; inset:0; transform-origin:top left; }
-      .slide-label { color:#45515e; }
-      @media (max-width:700px) { .site-nav { display:none; } body { padding-top:20px; } .deck { gap:22px; } }
+      .slide-frame { width:1280px; height:720px; position:relative; flex-shrink:0; scroll-margin-top:24px; }
+      .slide-frame > .slide { position:absolute; inset:0; transform-origin:top left; border-radius:8px; box-shadow:0 6px 24px rgba(31,45,61,.10); }
+      .slide-label, .pagenum { display:none; }
+      @media (max-width:700px) { .site-nav { display:none; } body { padding:12px 0 24px; } .deck { gap:14px; } .slide-frame { scroll-margin-top:12px; } }
 </style>
 <meta content="AI engineer portfolio featuring LLM evaluation, evidence-grounded RAG, backend integration, CI/CD, and observability." name="description"/><meta content="Jaeryun Joo | AI Engineer Portfolio" property="og:title"/><meta content="LLM evaluation, RAG grounding, backend integration, and reliable AI service delivery." property="og:description"/><meta content="website" property="og:type"/><meta content="width=device-width, initial-scale=1" name="viewport"/></head>
 <body><nav aria-label="Portfolio slides" class="site-nav"><a aria-label="Go to cover" href="#s1" title="Cover"></a><a aria-label="Go to contents" href="#s2" title="Contents"></a><a aria-label="Go to Procurement AI overview" href="#s3" title="Procurement AI overview"></a><a aria-label="Go to LLM evaluation" href="#s4" title="LLM evaluation"></a><a aria-label="Go to deployment and observability" href="#s5" title="Deployment and observability"></a><a aria-label="Go to Access Remediation RAG overview" href="#s6" title="Access Remediation RAG overview"></a><a aria-label="Go to grounding corpus design" href="#s7" title="Grounding corpus design"></a><a aria-label="Go to Vulnerability Remediation AI overview" href="#s8" title="Vulnerability Remediation AI overview"></a><a aria-label="Go to context scoping and tenant isolation" href="#s9" title="Context scoping and tenant isolation"></a><a aria-label="Go to career" href="#s10" title="Career"></a></nav>
